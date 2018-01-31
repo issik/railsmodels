@@ -1,0 +1,16 @@
+<h1>List of People</h1>
+
+<% @people.freeze do |people| %>
+  <blockquote>
+    <h1 ><%= @people.name %></h1>
+    <h2><%= @people.age %></h2>
+    <!--<i> ID: <%= task.id %></i>-->
+    <br /><br />
+    <%= link_to 'View Person', person_path(person) %>
+    <%= link_to 'Edit Person', edit_person_path(person) %>
+    <%= link_to 'Complete Person', @people, method: :delete %>
+
+  </blockquote>
+  <hr />
+<% end %>
+<%= link_to 'Create Person', new_person_path %>

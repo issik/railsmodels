@@ -1,0 +1,19 @@
+<h1>New Person</h1>
+
+<%= form_for @people do |f| %>
+  <%= f.text_field :name, placeholder: 'Name' %>
+  <br />
+  <%= f.text_field :age, placeholder: 'Age' %>
+  <br />
+  <%= f.text_field :hair_color, placeholder: 'Hair color' %>
+  <br />
+  <%= f.text_field :eye_color, placeholder: 'Eye color' %>
+  <br />
+  <%= f.text_field :gender, placeholder: 'Gender' %>
+  <br />
+  <%= f.label :alive %>
+  <%= f.check_box :alive %>
+  <br />
+  <%= f.submit %>
+<% end %>
+
